@@ -1,6 +1,7 @@
+require('dotenv').config()
 const nodemailer = require("nodemailer");
 const otp = require("./otp");
-
+const pass = process.env.ERHREAL_EMAIL_PASS;
 
 async function main() {
 
@@ -11,7 +12,7 @@ async function main() {
         secure: false, // true for 465, false for other ports
         auth: {
             user: "sadie.friesen36@ethereal.email",
-            pass: "EM5zYdDZ8UfwQuSsQS",
+            pass: pass,
         },
     });
 
